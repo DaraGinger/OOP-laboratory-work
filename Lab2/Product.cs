@@ -44,22 +44,29 @@ namespace Lab2
             WeightGrams = weightGrams;
         }
 
-        public void Print()
+        public int GetCaloriesIn100Grams()
         {
-            Console.WriteLine($"Calories per 100g: {CaloriesIn100Grams} calories\nWeight in grams: {WeightGrams} grams");
+            return CaloriesIn100Grams;
         }
 
-        public void CalculateCaloriesByWeight()
+        public int GetWeightGrams()
         {
-            int calories = CaloriesIn100Grams * WeightGrams / 100;
-            Console.WriteLine($"{WeightGrams}g of product contains {calories} calories");
+            return WeightGrams;
         }
 
-        public void CalculateWeightByCalories(int calories)
+        public override string ToString()
         {
-            int weight = calories * 100 / CaloriesIn100Grams;
+            return $"Calories per 100g: {CaloriesIn100Grams} calories\nWeight in grams: {WeightGrams} grams";
+        }
 
-            Console.WriteLine($"{calories} calories is {weight} grams of product.");
+        public int CalculateCaloriesByWeight()
+        {
+            return CaloriesIn100Grams * WeightGrams / 100;
+        }
+
+        public int CalculateWeightByCalories(int calories)
+        {
+            return calories * 100 / CaloriesIn100Grams;
         }
     }
 }
