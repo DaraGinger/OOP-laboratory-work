@@ -13,43 +13,66 @@ namespace Lab3
     //- метод формування рядка з інформацією про об'єкт.
 
     //Будова: назва, висота будівлі H, висота фундаменту h
-    //Розрахувати висоту фундаменту по формулі h = 0,003* Н
-    //Обчислити об'єм усієї будови разом з фундаментом при заданій площі основи в якості вхідного параметра
+    //Метод обробки даних усередині класу: Розрахувати висоту фундаменту по формулі h = 0,003* Н
+    //Зовнішня функція: Обчислити об'єм усієї будови разом з фундаментом при заданій площі основи в якості вхідного параметра
 
     public class Building
     {
+        protected string Name = string.Empty;
+
+        protected double BuildingHeight, FundamentHeight;
+
         public Building()
         {
         }
 
-        public Building(string? name, double buildingHeight, double fundamentHeight)
+        public Building(string name, double buildingHeight)
         {
             Name = name;
             BuildingHeight = buildingHeight;
-            FundamentHeight = fundamentHeight;
+            FundamentHeight = 0.003*BuildingHeight;
         }
 
-        private string? Name;
-
-        private double BuildingHeight;
-
-        private double FundamentHeight;
-
-        public void SetName(string? name)
+        public void SetName(string name)
         {
             Name = name;
         }
 
-        public void SetHeight(double height)
+        public void SetBuildingHeight(double buildingHeight)
         {
-            BuildingHeight = height;
+            BuildingHeight = buildingHeight;
+
+            SetFundamentHeight();
+        }
+
+        protected void SetFundamentHeight()
+        {
+            FundamentHeight = 0.003 * BuildingHeight;
+        }
+
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public double GetBuildingHeight()
+        {
+            return BuildingHeight;
+        }
+
+        public double GetFundamentHeight()
+        {
+            return FundamentHeight;
         }
 
         public override string ToString()
         {
-            return $"Building name: {Name}\nHeight: {BuildingHeight} m";
+            return $"Class Building \nName: {Name}\nBuilding Height: {BuildingHeight} m\nFundament Height: {FundamentHeight} m";
         }
 
-
+        public double CalculateFundamentHeight()
+        {
+            return 0.003 * BuildingHeight;
+        }
     }
 }
