@@ -24,13 +24,16 @@ namespace Lab3
         public void SetWeight(double weight)
         {
             Weight = weight;
-            SetFundamentHeight();
-            FundamentHeight = GetFundamentHeight() + 0.00002 * weight;
         }
 
         public double GetWeight()
         {
             return Weight;
+        }
+
+        public double CalculateFundamentHeight()
+        {
+            return GetFundamentHeight() + 0.00002 * Weight;
         }
 
         public override string ToString()
