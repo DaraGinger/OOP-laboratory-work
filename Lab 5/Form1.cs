@@ -17,6 +17,8 @@ namespace Lab_5
 
         private TaskType currentTask;
 
+        private Font resultFont;
+
         private void ColorRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (ColorRadioButton.Checked)
@@ -67,25 +69,29 @@ namespace Lab_5
 
         private void FontСheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (FontRadioButton.Checked)
+            if (FontСheckBox.Checked)
             {
-                ResultTextBox.Font = new Font("Comic Sans MS", 9, FontStyle.Bold);
+                ResultTextBox.Font = new Font("Comic Sans MS", resultFont.Size, FontStyle.Bold);
+                resultFont = new Font("Comic Sans MS", resultFont.Size, FontStyle.Bold);
             }
             else
             {
-                ResultTextBox.Font = new Font("Segoe UI", 9, FontStyle.Regular);
+                ResultTextBox.Font = new Font("Segoe UI", resultFont.Size, FontStyle.Regular);
+                resultFont = new Font("Segoe UI", resultFont.Size, FontStyle.Regular);
             }
         }
 
         private void SizeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (SizeRadioButton.Checked)
+            if (SizeCheckBox.Checked)
             {
-                ResultTextBox.Font = new Font(ResultTextBox.Font.FontFamily, 12, ResultTextBox.Font.Style);
+                ResultTextBox.Font = new Font(resultFont.FontFamily, 12, resultFont.Style);
+                resultFont = new Font(resultFont.FontFamily, 12, resultFont.Style);
             }
             else
             {
-                ResultTextBox.Font = new Font(ResultTextBox.Font.FontFamily, 9, ResultTextBox.Font.Style);
+                ResultTextBox.Font = new Font(resultFont.FontFamily, 9, resultFont.Style);
+                resultFont = new Font(resultFont.FontFamily, 9, resultFont.Style);
             }
         }
 
@@ -99,6 +105,7 @@ namespace Lab_5
         private void button3_Click(object sender, EventArgs e)
         {
             TaskTextLabel.Text = "Вивести в основну форму слова,\nщо повторюються більше одного\nразу в кожному рядку тексту\nдодаткової форми.";
+            UserTextBox.Clear();
             ResultTextBox.Clear();
             currentTask = TaskType.Task2;
             Form2 form2 = new Form2(this);
@@ -124,17 +131,34 @@ namespace Lab_5
         }
 
         private void Task1()
-        {
+        { 
+            string text = UserTextBox.Text;
+
+            if (UpdateTextBox.Text == null)
+            {
+                text = UserTextBox.Text.Replace(UpdateTextBox.Text, " ");
+            }
+
             var words = UserTextBox.Text.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
             words = words.Where(word => word.Length <= 2).ToArray();
-            var result = string.Join(",", words);
+            var result = string.Join(" ", words);
             ResultTextBox.Text = result;
         }
 
         private void Task2()
         {
             ResultTextBox.Text = task2Test;
+        }
+
+        private void ResultTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            resultFont = new Font(UserTextBox.Font.FontFamily, 9, UserTextBox.Font.Style);
         }
     }
 }

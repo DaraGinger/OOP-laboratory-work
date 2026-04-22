@@ -98,9 +98,9 @@
             ResultTextBox.Location = new Point(218, 312);
             ResultTextBox.Multiline = true;
             ResultTextBox.Name = "ResultTextBox";
-            ResultTextBox.ReadOnly = true;
             ResultTextBox.Size = new Size(222, 93);
             ResultTextBox.TabIndex = 5;
+            ResultTextBox.TextChanged += ResultTextBox_TextChanged;
             // 
             // TaskTextLabel
             // 
@@ -207,6 +207,7 @@
             Controls.Add(UserTextBox);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

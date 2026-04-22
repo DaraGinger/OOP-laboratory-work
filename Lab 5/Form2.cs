@@ -12,9 +12,16 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string text = "";
+            string text = textBox1.Text;
 
-            var strings = textBox1.Text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            if (textBox1.Text == null)
+            {
+                text = textBox1.Text.Replace(",", " ");
+            }
+
+            var strings = text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            string result = "";
 
             foreach (string s in strings)
             {
@@ -26,14 +33,14 @@
                     {
                         if (words[i] == words[j])
                         {
-                            text += words[i] + " ";
+                            result += words[i] + " ";
                             break;
                         }
                     }
                 }
             }
 
-            _form1.task2Test = text;
+            _form1.task2Test = result;
         }
     }
 }

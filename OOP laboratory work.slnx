@@ -1,7 +1,8 @@
 <Solution>
   <Project Path="Lab 1/Lab1.csproj" />
   <Project Path="Lab 4/Lab4.csproj" Id="5d701ca5-f742-43f3-8e9c-309e6e5d35e2" />
-  <Project Path="Lab 5/Lab 5.csproj" Id="179e92ff-22c9-44ff-90c0-90e990ba6e0e" />
+  <Project Path="Lab 5/Lab5.csproj" Id="179e92ff-22c9-44ff-90c0-90e990ba6e0e" />
   <Project Path="Lab2/Lab2.csproj" Id="2074ea04-1604-48c8-bbfe-f21063f2458c" />
   <Project Path="Lab3/Lab3.csproj" Id="8c0d1c5d-9757-421d-ade1-f576e885f505" />
+  <Project Path="Lab6/Lab6.csproj" Id="98a57ba5-5baa-469b-9229-de461f97bd01" />
 </Solution>
