@@ -47,10 +47,10 @@
             // UserTextBox
             // 
             UserTextBox.ForeColor = SystemColors.ActiveCaptionText;
-            UserTextBox.Location = new Point(218, 29);
+            UserTextBox.Location = new Point(113, 21);
             UserTextBox.Multiline = true;
             UserTextBox.Name = "UserTextBox";
-            UserTextBox.Size = new Size(223, 93);
+            UserTextBox.Size = new Size(419, 165);
             UserTextBox.TabIndex = 0;
             // 
             // button1
@@ -95,12 +95,11 @@
             // 
             // ResultTextBox
             // 
-            ResultTextBox.Location = new Point(218, 312);
+            ResultTextBox.Location = new Point(201, 327);
             ResultTextBox.Multiline = true;
             ResultTextBox.Name = "ResultTextBox";
-            ResultTextBox.Size = new Size(222, 93);
+            ResultTextBox.Size = new Size(239, 93);
             ResultTextBox.TabIndex = 5;
-            ResultTextBox.TextChanged += ResultTextBox_TextChanged;
             // 
             // TaskTextLabel
             // 
@@ -113,7 +112,7 @@
             // ColorRadioButton
             // 
             ColorRadioButton.AutoSize = true;
-            ColorRadioButton.Location = new Point(485, 218);
+            ColorRadioButton.Location = new Point(472, 296);
             ColorRadioButton.Name = "ColorRadioButton";
             ColorRadioButton.Size = new Size(69, 24);
             ColorRadioButton.TabIndex = 7;
@@ -125,7 +124,7 @@
             // FontRadioButton
             // 
             FontRadioButton.AutoSize = true;
-            FontRadioButton.Location = new Point(485, 264);
+            FontRadioButton.Location = new Point(472, 342);
             FontRadioButton.Name = "FontRadioButton";
             FontRadioButton.Size = new Size(78, 24);
             FontRadioButton.TabIndex = 8;
@@ -137,7 +136,7 @@
             // SizeRadioButton
             // 
             SizeRadioButton.AutoSize = true;
-            SizeRadioButton.Location = new Point(485, 315);
+            SizeRadioButton.Location = new Point(472, 393);
             SizeRadioButton.Name = "SizeRadioButton";
             SizeRadioButton.Size = new Size(78, 24);
             SizeRadioButton.TabIndex = 9;
@@ -149,7 +148,7 @@
             // ColorCheckBox
             // 
             ColorCheckBox.AutoSize = true;
-            ColorCheckBox.Location = new Point(91, 218);
+            ColorCheckBox.Location = new Point(69, 296);
             ColorCheckBox.Name = "ColorCheckBox";
             ColorCheckBox.Size = new Size(70, 24);
             ColorCheckBox.TabIndex = 10;
@@ -160,7 +159,7 @@
             // FontСheckBox
             // 
             FontСheckBox.AutoSize = true;
-            FontСheckBox.Location = new Point(91, 264);
+            FontСheckBox.Location = new Point(69, 342);
             FontСheckBox.Name = "FontСheckBox";
             FontСheckBox.Size = new Size(79, 24);
             FontСheckBox.TabIndex = 11;
@@ -171,7 +170,7 @@
             // SizeCheckBox
             // 
             SizeCheckBox.AutoSize = true;
-            SizeCheckBox.Location = new Point(91, 314);
+            SizeCheckBox.Location = new Point(69, 392);
             SizeCheckBox.Name = "SizeCheckBox";
             SizeCheckBox.Size = new Size(79, 24);
             SizeCheckBox.TabIndex = 12;
@@ -181,7 +180,7 @@
             // 
             // UpdateTextBox
             // 
-            UpdateTextBox.Location = new Point(218, 162);
+            UpdateTextBox.Location = new Point(201, 281);
             UpdateTextBox.Name = "UpdateTextBox";
             UpdateTextBox.Size = new Size(223, 27);
             UpdateTextBox.TabIndex = 13;

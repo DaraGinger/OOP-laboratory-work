@@ -14,12 +14,12 @@
         {
             string text = textBox1.Text;
 
-            if (textBox1.Text == null)
+            if (textBox1.Text != null)
             {
                 text = textBox1.Text.Replace(",", " ");
             }
 
-            var strings = text.Split(new[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var strings = text.Split(new[] { "." }, StringSplitOptions.RemoveEmptyEntries);
 
             string result = "";
 

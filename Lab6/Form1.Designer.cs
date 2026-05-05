@@ -30,11 +30,12 @@
         {
             textBox1 = new TextBox();
             button1 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(114, 59);
+            textBox1.Location = new Point(120, 138);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(349, 240);
@@ -42,7 +43,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(234, 335);
+            button1.Location = new Point(237, 394);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
@@ -50,11 +51,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 49);
+            label1.Name = "label1";
+            label1.Size = new Size(544, 40);
+            label1.TabIndex = 2;
+            label1.Text = "Написати програму, яка зчитує текст із файлу та виводить на екран речення,\r\nщо містять максимальну кількість знаків пунктуації.\r\n";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(564, 435);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "Form1";
@@ -68,5 +79,6 @@
 
         private TextBox textBox1;
         private Button button1;
+        private Label label1;
     }
 }

@@ -134,26 +134,23 @@ namespace Lab_5
         { 
             string text = UserTextBox.Text;
 
-            if (UpdateTextBox.Text == null)
+            if (UpdateTextBox.Text != null)
             {
                 text = UserTextBox.Text.Replace(UpdateTextBox.Text, " ");
             }
 
-            var words = UserTextBox.Text.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            var sentences = UserTextBox.Text.Split(new[] { '.', '!', '?' }, StringSplitOptions.RemoveEmptyEntries);
+
+            var words = sentences.SelectMany(s => s.Split(' ')).ToArray();
 
             words = words.Where(word => word.Length <= 2).ToArray();
-            var result = string.Join(" ", words);
+            var result = string.Join(",", words);
             ResultTextBox.Text = result;
         }
 
         private void Task2()
         {
             ResultTextBox.Text = task2Test;
-        }
-
-        private void ResultTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
