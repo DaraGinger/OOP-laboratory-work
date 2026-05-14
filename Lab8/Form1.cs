@@ -9,19 +9,29 @@ namespace Lab8
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CalculateExtremum(x =>
+            var (x, f) = CalculateExtremum(x =>
             {
                 return (x - 1) * Math.Sin(x * x + 1) - Math.Pow(2, 0.25);
             }, 0, 2);
 
-            //CalculateExtremum(x =>
-            //{
-            //    return (x - 1) * Math.Sin(x * x + 1) - Math.Pow(2, 0.25);
-            //}, 2.7, 3.3);
+            XLabel.Text = x.ToString("F7");
+            functionLabel.Text = f.ToString("F7");
         }
-        private void CalculateExtremum(Func<double, double> func, double a, double b)
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            double eps = 1e-7;
+            var (x, f) = CalculateExtremum(x =>
+            {
+                return -Math.Pow((x-2), 2) + 3;
+            }, -5, 5);
+
+            testXLabel.Text = x.ToString("F7");
+            testResultLabel.Text = f.ToString("F7");
+        }
+
+        private (double x, double f) CalculateExtremum(Func<double, double> func, double a, double b)
+        {
+            double eps = 1e-5;
 
             double k = (Math.Sqrt(5) - 1) / 2.0;
             double x1 = 0, x2 = 0;
@@ -52,10 +62,10 @@ namespace Lab8
             }
 
             double x = (x1 + x2) / 2;
-            XLabel.Text = x.ToString("F7");
 
             double f = func(x);
-            functionLabel.Text = f.ToString("F7");
+
+            return (x, f);
         }
     }
 }

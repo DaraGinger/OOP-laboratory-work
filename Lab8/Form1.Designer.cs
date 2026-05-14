@@ -34,6 +34,11 @@
             functionLabel = new Label();
             label4 = new Label();
             button1 = new Button();
+            button2 = new Button();
+            testResultLabel = new Label();
+            label3 = new Label();
+            testXLabel = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -97,11 +102,66 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // button2
+            // 
+            button2.Location = new Point(409, 230);
+            button2.Name = "button2";
+            button2.Size = new Size(111, 29);
+            button2.TabIndex = 6;
+            button2.Text = "Calculate test";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // testResultLabel
+            // 
+            testResultLabel.AutoSize = true;
+            testResultLabel.Font = new Font("Segoe UI", 16F);
+            testResultLabel.Location = new Point(498, 176);
+            testResultLabel.Name = "testResultLabel";
+            testResultLabel.Size = new Size(30, 37);
+            testResultLabel.TabIndex = 10;
+            testResultLabel.Text = "F";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 16F);
+            label3.Location = new Point(409, 176);
+            label3.Name = "label3";
+            label3.Size = new Size(83, 37);
+            label3.TabIndex = 9;
+            label3.Text = "F(x) =";
+            // 
+            // testXLabel
+            // 
+            testXLabel.AutoSize = true;
+            testXLabel.Font = new Font("Segoe UI", 16F);
+            testXLabel.Location = new Point(473, 116);
+            testXLabel.Name = "testXLabel";
+            testXLabel.Size = new Size(29, 37);
+            testXLabel.TabIndex = 8;
+            testXLabel.Text = "x";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16F);
+            label6.Location = new Point(409, 116);
+            label6.Name = "label6";
+            label6.Size = new Size(54, 37);
+            label6.TabIndex = 7;
+            label6.Text = "x =";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 271);
+            Controls.Add(testResultLabel);
+            Controls.Add(label3);
+            Controls.Add(testXLabel);
+            Controls.Add(label6);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(functionLabel);
             Controls.Add(label4);
@@ -123,5 +183,10 @@
         private Label functionLabel;
         private Label label4;
         private Button button1;
+        private Button button2;
+        private Label testResultLabel;
+        private Label label3;
+        private Label testXLabel;
+        private Label label6;
     }
 }
