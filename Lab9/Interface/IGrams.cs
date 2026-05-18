@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lab9
+namespace Lab9.Interface
 {
     public interface IGrams
     {

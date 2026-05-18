@@ -1,4 +1,6 @@
-﻿namespace Lab9.Classes
+﻿using Lab9.Interface;
+
+namespace Lab9.Classes
 {
     public class Protein : Diet, ISystemInitialized, IGrams
     {

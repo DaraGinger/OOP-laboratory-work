@@ -261,7 +261,7 @@
             // PCFCalculateButton
             // 
             PCFCalculateButton.Enabled = false;
-            PCFCalculateButton.Location = new Point(703, 381);
+            PCFCalculateButton.Location = new Point(701, 381);
             PCFCalculateButton.Name = "PCFCalculateButton";
             PCFCalculateButton.Size = new Size(104, 29);
             PCFCalculateButton.TabIndex = 21;
