@@ -159,7 +159,9 @@ namespace Lab_10
             float currentCenterX = 450f + offsetX;
             float currentCenterY = 310f + offsetY;
 
+            graphics.TranslateTransform(currentCenterX, currentCenterY);
             graphics.ScaleTransform(zoom, zoom);
+            graphics.TranslateTransform(-currentCenterX, -currentCenterY);
 
             graphics.TranslateTransform(offsetX, offsetY);
 
